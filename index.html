@@ -1,0 +1,1734 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Deri Tri Prasetio | Cook & Chef</title>
+    <meta name="description" content="Portfolio profesional Deri Tri Prasetio, profesional kuliner dengan pengalaman di bidang pengolahan makanan, operasional dapur, dan manajemen tim.">
+
+    <link rel="icon" type="image/png" href="d.png">
+    <link rel="icon" href="assets/logo-j.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #080e1b;
+            --surface: #101a2c;
+            --surface-light: #17243a;
+            --blue: #3984ff;
+            --cyan: #37c8f5;
+            --text: #f2f6ff;
+            --muted: #a2b0c7;
+            --border: rgba(255,255,255,.10);
+            --radius: 18px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 90px;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: "DM Sans", sans-serif;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button {
+            font: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: min(1120px, 90%);
+            margin-inline: auto;
+        }
+
+        .section {
+            padding: 95px 0;
+        }
+
+        .section-label {
+            color: var(--cyan);
+            font-size: .82rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-family: "Plus Jakarta Sans", sans-serif;
+            font-size: clamp(1.8rem, 4vw, 2.6rem);
+            line-height: 1.25;
+            margin-bottom: 16px;
+        }
+
+        .section-description {
+            color: var(--muted);
+            max-width: 650px;
+            margin-bottom: 38px;
+        }
+
+        .accent {
+            color: var(--cyan);
+        }
+
+        /* NAVBAR */
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(8,14,27,.91);
+            backdrop-filter: blur(18px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-inner {
+            min-height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .brand {
+            font-family: "Plus Jakarta Sans", sans-serif;
+            font-size: 1.25rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .brand span {
+            color: var(--cyan);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 27px;
+        }
+
+        .nav-links a {
+            font-size: .9rem;
+            color: var(--muted);
+            transition: .25s;
+        }
+
+        .nav-links a:hover {
+            color: white;
+        }
+
+        .nav-links .nav-contact {
+            background: var(--blue);
+            color: white;
+            padding: 10px 17px;
+            border-radius: 10px;
+        }
+
+        .menu-toggle {
+            display: none;
+            border: 1px solid var(--border);
+            background: var(--surface);
+            color: white;
+            border-radius: 9px;
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 610px;
+            display: flex;
+            align-items: center;
+            padding: 75px 0 85px;
+            background:
+                radial-gradient(ellipse at 80% 30%, rgba(31,107,217,.13), transparent 38%),
+                radial-gradient(ellipse at 15% 85%, rgba(55,200,245,.06), transparent 35%);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.35fr .8fr;
+            align-items: center;
+            gap: 75px;
+        }
+
+        .availability {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            padding: 8px 14px;
+            border: 1px solid var(--border);
+            border-radius: 30px;
+            color: #dce8fa;
+            font-size: .82rem;
+            margin-bottom: 25px;
+        }
+
+        .availability-dot {
+            width: 8px;
+            height: 8px;
+            background: #35d399;
+            border-radius: 50%;
+            box-shadow: 0 0 12px rgba(53,211,153,.6);
+        }
+
+        .hero h1 {
+            font-family: "Plus Jakarta Sans", sans-serif;
+            font-size: clamp(2.5rem, 5.7vw, 4.5rem);
+            font-weight: 800;
+            line-height: 1.12;
+            letter-spacing: -2px;
+            margin-bottom: 22px;
+        }
+
+        .hero-description {
+            max-width: 590px;
+            color: var(--muted);
+            font-size: 1rem;
+            margin-bottom: 28px;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 28px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            padding: 12px 19px;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            font-weight: 700;
+            font-size: .9rem;
+            transition: transform .2s, background .2s;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .btn-primary {
+            background: var(--blue);
+            border-color: var(--blue);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: var(--surface);
+            color: white;
+        }
+
+        .hero-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+        }
+
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 7px 11px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 7px;
+            color: #c9d9f0;
+            font-size: .8rem;
+        }
+
+        .hero-visual {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 0;
+        }
+
+        .photo-frame {
+            position: relative;
+            width: min(100%, 330px);
+            min-height: 350px;
+            display: flex;
+            align-items: end;
+            justify-content: center;
+        }
+
+        .photo-glow {
+            position: absolute;
+            width: 270px;
+            height: 270px;
+            background: rgba(42,123,255,.20);
+            filter: blur(65px);
+            border-radius: 50%;
+            bottom: 25px;
+        }
+
+        .profile-photo {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-height: 440px;
+            object-fit: contain;
+            object-position: bottom;
+            filter: drop-shadow(0 20px 30px rgba(0,0,0,.22));
+        }
+
+        .photo-placeholder {
+            position: relative;
+            z-index: 1;
+            width: 250px;
+            height: 290px;
+            border: 1px dashed rgba(255,255,255,.25);
+            border-radius: 22px;
+            background: linear-gradient(145deg, #192a43, #101a2c);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--muted);
+            text-align: center;
+            padding: 20px;
+        }
+
+        .photo-placeholder strong {
+            font-size: 4rem;
+            color: var(--cyan);
+            line-height: 1.2;
+        }
+
+        .photo-placeholder span {
+            font-size: .8rem;
+            margin-top: 10px;
+        }
+
+        .floating-card {
+            position: absolute;
+            z-index: 2;
+            left: -10px;
+            bottom: 20px;
+            padding: 15px 18px;
+            border-radius: 13px;
+            border: 1px solid var(--border);
+            background: #15233a;
+            box-shadow: 0 15px 35px rgba(0,0,0,.2);
+        }
+
+        .floating-card strong {
+            display: block;
+            font-size: .95rem;
+        }
+
+        .floating-card span {
+            color: var(--cyan);
+            font-size: .78rem;
+        }
+
+        /* ABOUT */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: .8fr 1.2fr;
+            gap: 35px;
+            align-items: start;
+        }
+
+        .about-card,
+        .info-card,
+        .experience-card,
+        .skill-card,
+        .education-card,
+        .contact-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+        }
+
+        .about-card {
+            padding: 28px;
+        }
+
+        .about-card h3 {
+            font-size: 1.15rem;
+            margin-bottom: 14px;
+        }
+
+        .about-card p {
+            color: var(--muted);
+            font-size: .92rem;
+        }
+
+        .about-details {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+        }
+
+        .info-card {
+            padding: 20px;
+        }
+
+        .info-card small {
+            display: block;
+            color: var(--muted);
+            margin-bottom: 5px;
+        }
+
+        .info-card strong {
+            font-size: .95rem;
+        }
+
+        /* EXPERIENCE */
+
+        .experience-list {
+            display: grid;
+            gap: 16px;
+        }
+
+        .experience-card {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 24px;
+            padding: 24px;
+            transition: border-color .2s, transform .2s;
+        }
+
+        .experience-card:hover {
+            border-color: rgba(55,200,245,.45);
+            transform: translateY(-2px);
+        }
+
+        .experience-date {
+            color: var(--cyan);
+            font-size: .83rem;
+            font-weight: 700;
+            padding-top: 4px;
+        }
+
+        .experience-content h3 {
+            font-size: 1.05rem;
+            margin-bottom: 2px;
+        }
+
+        .experience-content .role {
+            color: #c2d0e5;
+            font-size: .9rem;
+            margin-bottom: 9px;
+        }
+
+        .experience-content p {
+            color: var(--muted);
+            font-size: .9rem;
+        }
+
+        /* SKILLS */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .skill-card {
+            padding: 23px;
+        }
+
+        .skill-heading {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .skill-heading h3 {
+            font-size: .97rem;
+        }
+
+        .skill-heading span {
+            color: var(--cyan);
+            font-size: .85rem;
+            font-weight: 700;
+        }
+
+        .skill-card p {
+            color: var(--muted);
+            font-size: .86rem;
+            margin-bottom: 17px;
+        }
+
+        .progress-track {
+            width: 100%;
+            height: 7px;
+            border-radius: 10px;
+            background: #24344c;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            width: 0;
+            background: linear-gradient(90deg, var(--blue), var(--cyan));
+            border-radius: inherit;
+            transition: width 1.2s ease;
+        }
+
+        /* EDUCATION */
+
+        .education-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 28px;
+        }
+
+        .education-icon {
+            width: 52px;
+            height: 52px;
+            flex-shrink: 0;
+            display: grid;
+            place-items: center;
+            border-radius: 14px;
+            background: rgba(57,132,255,.15);
+            color: var(--cyan);
+            font-size: 1.3rem;
+        }
+
+        .education-card h3 {
+            margin-bottom: 5px;
+        }
+
+        .education-card p {
+            color: var(--muted);
+            font-size: .9rem;
+        }
+
+        /* CONTACT */
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 17px;
+        }
+
+        .contact-card {
+            padding: 24px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: transform .2s, border-color .2s;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--blue);
+        }
+
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            display: grid;
+            place-items: center;
+            flex-shrink: 0;
+            background: var(--surface-light);
+            border-radius: 13px;
+            color: var(--cyan);
+            font-size: 1.25rem;
+        }
+
+        .contact-card small {
+            display: block;
+            color: var(--muted);
+            font-size: .78rem;
+        }
+
+        .contact-card strong {
+            display: block;
+            font-size: .84rem;
+            overflow-wrap: anywhere;
+        }
+
+        .contact-note {
+            margin-top: 25px;
+            color: var(--muted);
+            font-size: .86rem;
+        }
+
+        /* FOOTER */
+
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 25px 0;
+            text-align: center;
+            color: var(--muted);
+            font-size: .84rem;
+        }
+
+        /* ANIMATION */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity .6s ease, transform .6s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 850px) {
+            .nav-links {
+                gap: 16px;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1.15fr .85fr;
+                gap: 30px;
+            }
+
+            .hero h1 {
+                letter-spacing: -1px;
+            }
+
+            .experience-card {
+                grid-template-columns: 145px 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 650px) {
+            .section {
+                padding: 70px 0;
+            }
+
+            .nav-inner {
+                min-height: 68px;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 68px;
+                left: 0;
+                right: 0;
+                display: none;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+                padding: 12px 5% 20px;
+                background: #0b1221;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .nav-links a {
+                padding: 12px 8px;
+            }
+
+            .nav-links .nav-contact {
+                text-align: center;
+                margin-top: 7px;
+            }
+
+            .hero {
+                padding: 55px 0 65px;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 38px;
+            }
+
+            .hero h1 {
+                font-size: clamp(2.4rem, 11vw, 3.5rem);
+            }
+
+            .hero-description {
+                font-size: .94rem;
+            }
+
+            .hero-visual {
+                grid-row: 1;
+            }
+
+            .photo-frame {
+                min-height: 280px;
+                width: min(100%, 270px);
+            }
+
+            .profile-photo {
+                max-height: 340px;
+            }
+
+            .floating-card {
+                left: -12px;
+                bottom: 8px;
+            }
+
+            .about-grid,
+            .about-details,
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .experience-card {
+                grid-template-columns: 1fr;
+                gap: 8px;
+                padding: 21px;
+            }
+
+            .experience-date {
+                font-size: .8rem;
+            }
+
+            .education-card {
+                padding: 21px;
+            }
+
+            .contact-card {
+                padding: 20px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                scroll-behavior: auto !important;
+                animation: none !important;
+                transition: none !important;
+            }
+
+            .reveal {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+
+        
+/* DOKUMEN & SERTIFIKAT */
+
+.documents-section {
+    background:
+        radial-gradient(ellipse at 10% 20%, rgba(57,132,255,.08), transparent 45%),
+        #080e1b;
+}
+
+.documents-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.document-card {
+    overflow: hidden;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    transition: transform .25s, border-color .25s;
+}
+
+.document-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--blue);
+}
+
+.document-preview {
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #14233a;
+    border-bottom: 1px solid var(--border);
+}
+
+.document-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #e8edf5;
+    transition: transform .3s;
+}
+
+.document-card:hover .document-preview img {
+    transform: scale(1.025);
+}
+
+.pdf-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: #ff8e8e;
+}
+
+.pdf-icon {
+    font-size: 3.8rem;
+    line-height: 1;
+}
+
+.pdf-preview span {
+    color: var(--muted);
+    font-size: .85rem;
+}
+
+.document-info {
+    padding: 22px;
+}
+
+.document-type {
+    display: inline-block;
+    padding: 4px 9px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    color: var(--cyan);
+    background: rgba(55,200,245,.10);
+    font-size: .73rem;
+    font-weight: 700;
+    letter-spacing: .5px;
+}
+
+.document-info h3 {
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+}
+
+.document-info p {
+    color: var(--muted);
+    font-size: .88rem;
+    margin-bottom: 18px;
+}
+
+.document-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.document-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 9px 13px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--surface-light);
+    color: white;
+    font-size: .82rem;
+    font-weight: 600;
+    transition: background .2s;
+}
+
+.document-btn:hover {
+    background: var(--blue);
+}
+
+.document-note {
+    margin-top: 25px;
+    padding: 16px 18px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    color: var(--muted);
+    font-size: .85rem;
+}
+
+@media (max-width: 650px) {
+    .documents-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .document-preview {
+        height: 230px;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="container nav-inner">
+            <a href="#home" class="brand">DERI<span>.</span></a>
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                type="button"
+                aria-label="Buka menu navigasi"
+                aria-expanded="false"
+            >☰</button>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#tentang">Tentang</a>
+                <a href="#pengalaman">Pengalaman</a>
+                <a href="#keahlian">Keahlian</a>
+                <a href="#pendidikan">Pendidikan</a>
+                <a href="#dokumen">Dokumen</a>
+                <a href="#kontak" class="nav-contact">Hubungi Saya</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero" id="home">
+            <div class="container hero-grid">
+
+                <div class="hero-content">
+                    <div class="availability">
+                        <span class="availability-dot"></span>
+                        Head Chef
+                    </div>
+
+                    <h1>
+                        Halo, Saya<br>
+                        <span class="accent">Deri Tri Prasetio.</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Head Chef dengan pengalaman di bidang
+                        pengolahan makanan, persiapan bahan, pengelolaan
+                        operasional dapur, dan menjaga kualitas hidangan.
+                        Terbiasa bekerja mengikuti standar operasional,
+                        menjaga kebersihan, serta bekerja sama dalam tim.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#pengalaman" class="btn btn-primary">
+                            Lihat Pengalaman ↗
+                        </a>
+                        <a href="#kontak" class="btn btn-secondary">
+                            Hubungi Saya
+                        </a>
+                    </div>
+
+                    <div class="hero-tags">
+                        <span class="tag">🍳 Pengolahan Makanan</span>
+                        <span class="tag">✓ Standar SOP</span>
+                        <span class="tag">♧ Kerja Tim</span>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="photo-frame">
+                        <div class="photo-glow"></div>
+
+                        <img
+                            src="deri.png"
+                            alt="Foto Deri Tri Prasetio"
+                            class="profile-photo"
+                            id="profilePhoto"
+                        >
+
+                       
+                        <div class="floating-card">
+                            <strong>Deri Tri Prasetio</strong>
+                            <span>Cook & Head Chef</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- TENTANG SAYA -->
+        <section class="section" id="tentang">
+            <div class="container">
+                <div class="about-grid">
+
+                    <div class="reveal">
+                        <p class="section-label">Tentang Saya</p>
+                        <h2 class="section-title">
+                            Berdedikasi pada <span class="accent">kualitas</span>
+                            dan profesionalisme.
+                        </h2>
+
+                        <p class="section-description">
+                            Saya memiliki pengalaman dalam lingkungan kerja
+                            kuliner, mulai dari persiapan bahan hingga
+                            pengolahan makanan dan pengelolaan kegiatan dapur.
+                        </p>
+
+                        <div class="about-card">
+                            <h3>Profil Profesional</h3>
+                            <p>
+                                Lulusan SMK BPSK 2 Jakarta dengan pengalaman
+                                di sejumlah tempat kerja di bidang kuliner.
+                                Saya terbiasa memperhatikan kualitas rasa,
+                                tampilan hidangan, kebersihan area kerja,
+                                serta pelaksanaan tugas sesuai standar yang
+                                ditetapkan. Saya juga memiliki pengalaman
+                                mendukung koordinasi tim dan operasional dapur.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="about-details reveal">
+                        <div class="info-card">
+                            <small>Bidang Pekerjaan</small>
+                            <strong>Food & Beverage</strong>
+                        </div>
+
+                        <div class="info-card">
+                            <small>Spesialisasi</small>
+                            <strong>Cook / Chef</strong>
+                        </div>
+
+                        <div class="info-card">
+                            <small>Pendidikan</small>
+                            <strong>SMK BPSK 2 Jakarta</strong>
+                        </div>
+
+                        <div class="info-card">
+                            <small>Fokus Kerja</small>
+                            <strong>Kualitas & Kebersihan</strong>
+                        </div>
+
+                        <div class="info-card">
+                            <small>Operasional</small>
+                            <strong>Persiapan dan Produksi</strong>
+                        </div>
+
+                        <div class="info-card">
+                            <small>Kolaborasi</small>
+                            <strong>Kerja Sama Tim</strong>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PENGALAMAN KERJA -->
+        <section class="section" id="pengalaman" style="background:#0b1221;">
+            <div class="container">
+                <p class="section-label">Perjalanan Karier</p>
+                <h2 class="section-title">
+                    Pengalaman <span class="accent">Kerja</span>
+                </h2>
+                <p class="section-description">
+                    Pengalaman profesional di bidang kuliner berdasarkan
+                    riwayat pekerjaan yang tercantum dalam CV.
+                </p>
+
+                <div class="experience-list">
+
+                    <article class="experience-card reveal">
+                        <div class="experience-date">30 Jun 2014 – 1 Jan 2015</div>
+                        <div class="experience-content">
+                            <h3>Kowylon</h3>
+                            <div class="role">Helper</div>
+                            <p>
+                                Membantu memotong sayuran dan menyiapkan
+                                bahan-bahan yang diperlukan untuk proses
+                                persiapan makanan.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="experience-card reveal">
+                        <div class="experience-date">28 Mar 2015 – 4 Jun 2016</div>
+                        <div class="experience-content">
+                            <h3>Putien</h3>
+                            <div class="role">Cook</div>
+                            <p>
+                                Membuat makanan berdasarkan pesanan dan
+                                memastikan proses memasak mengikuti standar
+                                operasional yang berlaku.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="experience-card reveal">
+                        <div class="experience-date">11 Agu 2016 – 19 Mar 2018</div>
+                        <div class="experience-content">
+                            <h3>Pangkep 33</h3>
+                            <div class="role">Senior Cook</div>
+                            <p>
+                                Mendukung pengolahan pangan, menjaga kebersihan
+                                area dapur, membantu pengawasan staf baru,
+                                serta memperhatikan rasa dan tampilan hidangan.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="experience-card reveal">
+                        <div class="experience-date">10 Okt 2018 – 11 Mar 2020</div>
+                        <div class="experience-content">
+                            <h3>Sibas Fish Factory</h3>
+                            <div class="role">Cook</div>
+                            <p>
+                                Menyiapkan makanan untuk display dan pesanan
+                                pelanggan, dengan memperhatikan kualitas
+                                makanan serta kebersihan dapur.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="experience-card reveal">
+                        <div class="experience-date">1 Mar 2020 – 1 Mar 2021</div>
+                        <div class="experience-content">
+                            <h3>Foodpedia</h3>
+                            <div class="role">Demi Chef</div>
+                            <p>
+                                Mendukung pengendalian keluar-masuk barang,
+                                proses memasak, dan konsistensi rasa serta
+                                tampilan makanan sesuai standar.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="experience-card reveal">
+                        <div class="experience-date">5 Mei 2021 – 5 Mei 2022</div>
+                        <div class="experience-content">
+                            <h3>Sambal Bakar</h3>
+                            <div class="role">Head Chef</div>
+                            <p>
+                                Mengontrol operasional, memastikan ketersediaan
+                                bahan, serta menjaga kualitas rasa dan tampilan
+                                hidangan yang disajikan.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="experience-card reveal">
+                        <div class="experience-date">10 Jun 2022 – 28 Jun 2023</div>
+                        <div class="experience-content">
+                            <h3>Sodexo Indonesia</h3>
+                            <div class="role">Cook</div>
+                            <p>
+                                Menyiapkan makanan dalam jumlah besar,
+                                termasuk produksi sekitar 3.000 porsi per hari
+                                sesuai keterangan dalam CV, dengan mengikuti
+                                standar operasional.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="experience-card reveal">
+                        <div class="experience-date">Sep 2024 – 30 Okt 2025</div>
+                        <div class="experience-content">
+                            <h3>Uattuu</h3>
+                            <div class="role">Commis</div>
+                            <p>
+                                Menyiapkan makanan berdasarkan pesanan
+                                pelanggan serta menjaga keamanan makanan,
+                                kualitas, dan tampilan hidangan.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="experience-card reveal">
+                        <div class="experience-date">15 Okt 2025 – 15 Jun 2026</div>
+                        <div class="experience-content">
+                            <h3>SPPG Cipinang Melayu 07</h3>
+                            <div class="role">Head Chef</div>
+                            <p>
+                                Menyusun menu harian, membangun koordinasi
+                                tim, memantau kualitas rasa dan tampilan,
+                                serta mendukung operasional agar sesuai SOP
+                                dan target yang ditetapkan.
+                            </p>
+                        </div>
+                    </article>
+
+                     <article class="experience-card reveal">
+                        <div class="experience-date">19 Agustus 2026 – sampai saat ini</div>
+                        <div class="experience-content">
+                            <h3>SPPG Cipinang Muara 06</h3>
+                            <div class="role">Head Chef</div>
+                            <p>
+                                Menyusun menu harian, membangun koordinasi
+                                tim, memantau kualitas rasa dan tampilan,
+                                serta mendukung operasional agar sesuai SOP
+                                dan target yang ditetapkan.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- KEAHLIAN -->
+        <section class="section" id="keahlian">
+            <div class="container">
+                <p class="section-label">Kompetensi</p>
+                <h2 class="section-title">
+                    Keahlian <span class="accent">Profesional</span>
+                </h2>
+                <p class="section-description">
+                    Kompetensi utama yang mendukung pekerjaan di bidang
+                    pengolahan makanan dan operasional dapur.
+                    Persentase berikut merupakan estimasi tampilan dan dapat
+                    disesuaikan dengan kemampuan aktual.
+                </p>
+
+                <div class="skills-grid">
+
+                    <article class="skill-card reveal">
+                        <div class="skill-heading">
+                            <h3>Pengolahan Makanan</h3>
+                            <span>90%</span>
+                        </div>
+                        <p>
+                            Mengolah makanan berdasarkan pesanan dengan
+                            memperhatikan proses memasak, rasa, dan penyajian.
+                        </p>
+                        <div class="progress-track">
+                            <div class="progress-fill" data-level="90"></div>
+                        </div>
+                    </article>
+
+                    <article class="skill-card reveal">
+                        <div class="skill-heading">
+                            <h3>Persiapan Bahan</h3>
+                            <span>85%</span>
+                        </div>
+                        <p>
+                            Menyiapkan bahan, memotong sayuran, dan mendukung
+                            kesiapan bahan sebelum proses produksi.
+                        </p>
+                        <div class="progress-track">
+                            <div class="progress-fill" data-level="85"></div>
+                        </div>
+                    </article>
+
+                    <article class="skill-card reveal">
+                        <div class="skill-heading">
+                            <h3>Operasional Dapur</h3>
+                            <span>85%</span>
+                        </div>
+                        <p>
+                            Mendukung alur kerja dapur, ketersediaan bahan,
+                            serta pelaksanaan pekerjaan sesuai SOP.
+                        </p>
+                        <div class="progress-track">
+                            <div class="progress-fill" data-level="85"></div>
+                        </div>
+                    </article>
+
+                    <article class="skill-card reveal">
+                        <div class="skill-heading">
+                            <h3>Kebersihan & Keamanan Pangan</h3>
+                            <span>90%</span>
+                        </div>
+                        <p>
+                            Menjaga kebersihan area kerja dan memperhatikan
+                            keamanan pangan selama proses produksi.
+                        </p>
+                        <div class="progress-track">
+                            <div class="progress-fill" data-level="90"></div>
+                        </div>
+                    </article>
+
+                    <article class="skill-card reveal">
+                        <div class="skill-heading">
+                            <h3>Kontrol Kualitas Hidangan</h3>
+                            <span>85%</span>
+                        </div>
+                        <p>
+                            Memperhatikan konsistensi rasa, tampilan,
+                            dan kualitas makanan sebelum disajikan.
+                        </p>
+                        <div class="progress-track">
+                            <div class="progress-fill" data-level="85"></div>
+                        </div>
+                    </article>
+
+                    <article class="skill-card reveal">
+                        <div class="skill-heading">
+                            <h3>Koordinasi & Pengawasan Tim</h3>
+                            <span>80%</span>
+                        </div>
+                        <p>
+                            Membantu pembagian pekerjaan, koordinasi tim,
+                            dan pengawasan kegiatan operasional dapur.
+                        </p>
+                        <div class="progress-track">
+                            <div class="progress-fill" data-level="80"></div>
+                        </div>
+                    </article>
+
+                    <article class="skill-card reveal">
+                        <div class="skill-heading">
+                            <h3>Produksi Makanan Skala Besar</h3>
+                            <span>85%</span>
+                        </div>
+                        <p>
+                            Mendukung persiapan dan produksi makanan
+                            dalam jumlah besar sesuai target operasional.
+                        </p>
+                        <div class="progress-track">
+                            <div class="progress-fill" data-level="85"></div>
+                        </div>
+                    </article>
+
+                    <article class="skill-card reveal">
+                        <div class="skill-heading">
+                            <h3>Kerja Sama Tim</h3>
+                            <span>90%</span>
+                        </div>
+                        <p>
+                            Bekerja sama dengan anggota tim untuk menjaga
+                            kelancaran proses persiapan dan produksi.
+                        </p>
+                        <div class="progress-track">
+                            <div class="progress-fill" data-level="90"></div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PENDIDIKAN -->
+        <section class="section" id="pendidikan" style="background:#0b1221;">
+            <div class="container">
+                <p class="section-label">Latar Belakang</p>
+                <h2 class="section-title">
+                    Riwayat <span class="accent">Pendidikan</span>
+                </h2>
+                <p class="section-description">
+                    Pendidikan formal.
+                </p>
+
+                <div class="education-card reveal">
+                    <div class="education-icon">▤</div>
+                    <div>
+                        <h3>SMK BPSK 2 Jakarta</h3>
+                        <p>Pendidikan Sekolah Menengah Kejuruan</p>
+                        <p>Informasi tahun pendidikan dapat diperbarui sesuai ijazah.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+<!-- DOKUMEN & SERTIFIKAT -->
+<section class="section documents-section" id="dokumen">
+    <div class="container">
+
+        <p class="section-label">Bukti Profesional</p>
+
+        <h2 class="section-title">
+            Dokumen & <span class="accent">Sertifikat</span>
+        </h2>
+
+        <p class="section-description">
+            Dokumentasi pengalaman kerja dan sertifikat sebagai
+            bukti pendukung perjalanan profesional Deri Tri Prasetio.
+        </p>
+
+        <div class="documents-grid">
+
+            <!-- PAKLARING PDF -->
+            <article class="document-card reveal">
+
+                <div class="document-preview pdf-preview">
+                    <div class="pdf-icon">▤</div>
+                    <strong>PAKLARING</strong>
+                    <span>Dokumen PDF</span>
+                </div>
+
+                <div class="document-info">
+                    <span class="document-type">DOKUMEN KERJA</span>
+
+                    <h3>Surat Paklaring</h3>
+
+                    <p>
+                        Surat keterangan pengalaman kerja.
+                        Klik tombol di bawah untuk melihat dokumen.
+                    </p>
+
+                    <div class="document-actions">
+                        <a
+                            class="document-btn"
+                            href="Deri_Prasetio.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            ↗ Lihat PDF
+                        </a>
+
+                        <a
+                            class="document-btn"
+                            href="Deri_Prasetio.pdf"
+                            download
+                        >
+                            ↓ Unduh PDF
+                        </a>
+                    </div>
+                </div>
+
+            </article>
+
+            <!-- SERTIFIKAT 1 -->
+            <article class="document-card reveal">
+
+                <a
+                    class="document-preview"
+                    href="foto2.jpg"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Lihat sertifikat pertama ukuran penuh"
+                >
+                    <img
+                        src="foto2.jpg"
+                        alt="Sertifikat pertama Deri Tri Prasetio"
+                        loading="lazy"
+                    >
+                </a>
+
+                <div class="document-info">
+                    <span class="document-type">SERTIFIKAT</span>
+
+                    <h3>Sertifikat Kompetensi 1</h3>
+
+                    <p>
+                        Dokumentasi sertifikat pendukung kompetensi
+                        dan pengembangan profesional.
+                    </p>
+
+                    <div class="document-actions">
+                        <a
+                            class="document-btn"
+                            href="foto2.jpg"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            ↗ Lihat Sertifikat
+                        </a>
+
+                        <a
+                            class="document-btn"
+                            href="foto2.jpg"
+                            download
+                        >
+                            ↓ Unduh Foto
+                        </a>
+                    </div>
+                </div>
+
+            </article>
+
+            <!-- SERTIFIKAT 2 -->
+            <article class="document-card reveal">
+
+                <a
+                    class="document-preview"
+                    href="foto1.jpg"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Lihat sertifikat kedua ukuran penuh"
+                >
+                    <img
+                        src="foto1.jpg"
+                        alt="Sertifikat kedua Deri Tri Prasetio"
+                        loading="lazy"
+                    >
+                </a>
+
+                <div class="document-info">
+                    <span class="document-type">SERTIFIKAT</span>
+
+                    <h3>Sertifikat Kompetensi 2</h3>
+
+                    <p>
+                        Sertifikat tambahan untuk melengkapi
+                        portofolio profesional.
+                    </p>
+
+                    <div class="document-actions">
+                        <a
+                            class="document-btn"
+                            href="foto1.jpg"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            ↗ Lihat Sertifikat
+                        </a>
+
+                        <a
+                            class="document-btn"
+                            href="foto1.jpg"
+                            download
+                        >
+                            ↓ Unduh Foto
+                        </a>
+                    </div>
+                </div>
+
+            </article>
+            <!---sertifikat 3 -->
+
+             <article class="document-card reveal">
+
+                <a
+                    class="document-preview"
+                    href="foto3.jpg"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Lihat sertifikat kedua ukuran penuh"
+                >
+                    <img
+                        src="foto3.jpg"
+                        alt="Sertifikat kedua Deri Tri Prasetio"
+                        loading="lazy"
+                    >
+                </a>
+
+                <div class="document-info">
+                    <span class="document-type">SERTIFIKAT</span>
+
+                    <h3>Sertifikat Kompetensi 2</h3>
+
+                    <p>
+                        Sertifikat tambahan untuk melengkapi
+                        portofolio profesional.
+                    </p>
+
+                    <div class="document-actions">
+                        <a
+                            class="document-btn"
+                            href="foto3.jpg"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            ↗ Lihat Sertifikat
+                        </a>
+
+                        <a
+                            class="document-btn"
+                            href="foto3.jpg"
+                            download
+                        >
+                            ↓ Unduh Foto
+                        </a>
+                    </div>
+                </div>
+
+            </article>
+
+        </div>
+
+       
+    </div>
+</section>
+
+
+        <!-- KONTAK -->
+        <section class="section" id="kontak">
+            <div class="container">
+                <p class="section-label">Mari Terhubung</p>
+                <h2 class="section-title">
+                    Hubungi <span class="accent">Saya</span>
+                </h2>
+                <p class="section-description">
+                    Untuk informasi lebih lanjut mengenai pengalaman kerja
+                    atau peluang profesional, silakan hubungi melalui kontak
+                    berikut.
+                </p>
+
+                <div class="contact-grid">
+
+                    <a
+                        class="contact-card reveal"
+                        href="mailto:Prasetioderi7@gmail.com"
+                    >
+                        <div class="contact-icon" aria-hidden="true">✉</div>
+                        <div>
+                            <small>Email</small>
+                            <strong>Prasetioderi7@gmail.com</strong>
+                        </div>
+                    </a>
+
+                    <a
+                        class="contact-card reveal"
+                        href="tel:+6285771466348"
+                    >
+                        <div class="contact-icon" aria-hidden="true">☎</div>
+                        <div>
+                            <small>Telepon</small>
+                            <strong>085771466348</strong>
+                        </div>
+                    </a>
+
+                    <a
+                        class="contact-card reveal"
+                        href="https://wa.me/6285771466348"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <div class="contact-icon" aria-hidden="true">↗</div>
+                        <div>
+                            <small>WhatsApp</small>
+                            <strong>Chat Sekarang</strong>
+                        </div>
+                    </a>
+
+                </div>
+
+                
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>
+                © <span id="year"></span> Deri Tri Prasetio.
+                Cook & Head Chef.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Tahun otomatis di footer
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+        // Foto profil: tampilkan inisial jika gambar belum tersedia
+        const profilePhoto = document.getElementById("profilePhoto");
+        const photoPlaceholder = document.getElementById("photoPlaceholder");
+
+        function showPhotoPlaceholder() {
+            profilePhoto.hidden = true;
+            photoPlaceholder.hidden = false;
+        }
+
+        profilePhoto.addEventListener("error", showPhotoPlaceholder);
+
+        if (profilePhoto.complete && profilePhoto.naturalWidth === 0) {
+            showPhotoPlaceholder();
+        }
+
+        // Menu hamburger untuk HP
+        const menuToggle = document.getElementById("menuToggle");
+        const navLinks = document.getElementById("navLinks");
+
+        function closeMenu() {
+            navLinks.classList.remove("open");
+            menuToggle.setAttribute("aria-expanded", "false");
+        }
+
+        menuToggle.addEventListener("click", function () {
+            const isOpen = navLinks.classList.toggle("open");
+            menuToggle.setAttribute("aria-expanded", String(isOpen));
+        });
+
+        navLinks.querySelectorAll("a").forEach(function (link) {
+            link.addEventListener("click", closeMenu);
+        });
+
+        document.addEventListener("click", function (event) {
+            if (
+                !navLinks.contains(event.target) &&
+                !menuToggle.contains(event.target)
+            ) {
+                closeMenu();
+            }
+        });
+
+        // Animasi saat bagian website terlihat
+        const revealElements = document.querySelectorAll(".reveal");
+
+        if ("IntersectionObserver" in window) {
+            const observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.12
+            });
+
+            revealElements.forEach(function (element) {
+                observer.observe(element);
+            });
+        } else {
+            revealElements.forEach(function (element) {
+                element.classList.add("visible");
+            });
+        }
+
+        // Animasi progress bar keahlian
+        const progressBars = document.querySelectorAll(".progress-fill");
+
+        if ("IntersectionObserver" in window) {
+            const skillObserver = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        const level = entry.target.dataset.level;
+                        entry.target.style.width = level + "%";
+                        skillObserver.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.3
+            });
+
+            progressBars.forEach(function (bar) {
+                skillObserver.observe(bar);
+            });
+        } else {
+            progressBars.forEach(function (bar) {
+                bar.style.width = bar.dataset.level + "%";
+            });
+        }
+    </script>
+
+</body>
+</html>
